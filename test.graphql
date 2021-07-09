@@ -1,0 +1,151 @@
+query AssetSearchQuery(
+  $chains: [ChainScalar!]
+  $collection: CollectionSlug
+  $collections: [CollectionSlug!]
+  $count: Int
+  $cursor: String
+  $identity: IdentityInputType
+  $numericTraits: [TraitRangeType!]
+  $paymentAssets: [PaymentAssetSymbol!]
+  $priceFilter: PriceFilterType
+  $query: String
+  $resultModel: SearchResultModel
+  $shouldShowQuantity: Boolean = false
+  $sortAscending: Boolean
+  $sortBy: SearchSortBy
+  $stringTraits: [TraitInputType!]
+  $toggles: [SearchToggle!]
+  $creator: IdentityInputType
+  $isPrivate: Boolean
+  $safelistRequestStatuses: [SafelistRequestStatus!]
+) {
+  query {
+    ...AssetSearch_data_2hBjZ1
+  }
+}
+
+fragment AssetSearch_data_2hBjZ1 on Query {
+  ...CollectionHeadMetadata_data_2YoIWt
+  search(
+    after: $cursor
+    chains: $chains
+    collections: $collections
+    first: $count
+    identity: $identity
+    numericTraits: $numericTraits
+    paymentAssets: $paymentAssets
+    priceFilter: $priceFilter
+    querystring: $query
+    resultType: $resultModel
+    sortAscending: $sortAscending
+    sortBy: $sortBy
+    stringTraits: $stringTraits
+    toggles: $toggles
+    creator: $creator
+    isPrivate: $isPrivate
+    safelistRequestStatuses: $safelistRequestStatuses
+  ) {
+    edges {
+      node {
+        ...AssetSearchList_data_3Aax2O
+        __typename
+      }
+    }
+    totalCount
+  }
+}
+
+fragment AssetQuantity_data on AssetQuantityType {
+  asset {
+    ...Price_data
+  }
+  quantity
+}
+
+fragment AssetSearchList_data_3Aax2O on SearchResultType {
+  asset {
+    assetContract {
+      account {
+        address
+        chain {
+          identifier
+        }
+      }
+    }
+    ...token_id
+  }
+  ...Asset_data_3Aax2O
+}
+
+fragment Asset_data_3Aax2O on SearchResultType {
+  asset {
+    ...AssetCardContent_asset_27d9G3
+    ...AssetCardFooter_asset_fdERL
+    ...AssetMedia_asset
+  }
+}
+
+fragment AssetCardContent_asset_27d9G3 on AssetType {
+  name
+  ...AssetMedia_asset
+  assetContract {
+    account {
+      address
+      chain {
+        identifier
+      }
+    }
+  }
+}
+
+fragment AssetCardFooter_asset_fdERL on AssetType {
+
+  ownedQuantity(identity: $identity) @include(if: $shouldShowQuantity)
+  name
+  assetContract {
+    account {
+      address
+      chain {
+        identifier
+      }
+    }
+  }
+  orderData {
+    bestAsk {
+      closedAt
+      orderType
+      openedAt
+      quantity
+      paymentAssetQuantity {
+        quantity
+        ...AssetQuantity_data
+      }
+    }
+  }
+  
+}
+
+fragment AssetMedia_asset on AssetType {
+  name
+  imageUrl
+}
+
+fragment CollectionHeadMetadata_data_2YoIWt on Query {
+  collection(collection: $collection) {
+    bannerImageUrl
+    description
+    imageUrl
+    name
+  }
+}
+
+fragment Price_data on AssetType {
+  decimals
+  imageUrl
+  symbol
+  usdSpotPrice
+}
+
+fragment token_id on AssetType {
+  tokenId
+}

@@ -1,0 +1,52 @@
+{
+    "data": {
+      "query": {
+        "collection": {
+          "bannerImageUrl": "https://lh3.googleusercontent.com/56g0iREPjaJsa_4YKxvJhYvu3OZiiYhL1mjEONV8ekY9OZG57H2sJxq-twaCw6mWO3ThjC_zDJa2ZVBQCWaEPJi6V_CNmynIOZzRd0A=s2500",
+          "description": "The year is 2050. Humans are an interplanetary species and have all but abandoned the post-apocalyptic shatters of society on earth. Cats have taken over. One crime-ridden, nondescript inner city is inhabited by a group of cats collectively known as the Gutter Cats.",
+          "imageUrl": "https://lh3.googleusercontent.com/Q5TOQ46ZB-nKXqhVwrpZyS1uu3-CQ4exCWH5nag3m5dX5LdVPimxuMQESTIi3iueXn37ROMOFJUWCv5coaT3EffLPTfEUbF-gUjMuQ=s120",
+          "name": "Gutter Cat Gang"
+        },
+        "search": {
+          "edges": [
+            {
+              "node": {
+                "asset": {
+                  "assetContract": {
+                    "account": {
+                      "address": "0xedb61f74b0d09b2558f1eeb79b247c1f363ae452",
+                      "chain": {
+                        "identifier": "ETHEREUM"
+                      }
+                    }
+                  },
+                  "tokenId": "125",
+                  "name": "Gutter Cat #125",
+                  "imageUrl": "https://lh3.googleusercontent.com/MjMmjuV_XDehDr8NxYeoYC15uSSawBnMRXgIuZT8tQkD69B5v2MHeNVlF4hDO1rW_5TPQYOX2XPbX6ZdUJBW91_CoNmIPngZMtIjS3I",
+                  "orderData": {
+                    "bestAsk": {
+                      "closedAt": "2021-07-09T01:12:02",
+                      "orderType": "BASIC",
+                      "openedAt": "2021-07-09T00:00:23",
+                      "quantity": "1",
+                      "paymentAssetQuantity": {
+                        "quantity": "1446800000000000000",
+                        "asset": {
+                          "decimals": 18,
+                          "imageUrl": "https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg",
+                          "symbol": "ETH",
+                          "usdSpotPrice": 2110.05
+                        }
+                      }
+                    }
+                  }
+                },
+                "__typename": "SearchResultType"
+              }
+            }
+          ],
+          "totalCount": 877
+        }
+      }
+    }
+  }

@@ -1,0 +1,25 @@
+{
+  "chains": null,
+  "collection": "guttercatgang",
+  "collections": [
+    "guttercatgang"
+  ],
+  "count": 1,
+  "cursor": null,
+  "identity": null,
+  "numericTraits": null,
+  "paymentAssets": null,
+  "priceFilter": null,
+  "query": "",
+  "resultModel": null,
+  "shouldShowQuantity": false,
+  "sortAscending": true,
+  "sortBy": "PRICE",
+  "stringTraits": null,
+  "toggles": [
+    "BUY_NOW"
+  ],
+  "creator": null,
+  "isPrivate": null,
+  "safelistRequestStatuses": null
+}
